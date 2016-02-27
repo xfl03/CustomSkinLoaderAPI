@@ -1,4 +1,4 @@
-# CustomSkinLoader API
+# CustomSkinAPI
 
 ## API 意义
 
@@ -24,7 +24,7 @@ CustomSkinLoader 将会在 13.1 版本支持这一 API。
 
 ### 根地址
 
-根地址定义了可以响应 CustomSkinLoader API 的 URL。
+根地址定义了可以响应 CustomSkinAPI 的 URL。
 
 根地址可以是一个域名，例如 `http://localhost/` ，也可以带上端口 例如  `http://localhost:8080/`。也可以带有子文件夹，例如 `http://localhost/csl/`。
 

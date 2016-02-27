@@ -1,5 +1,5 @@
 
-#CustomSkinLoader API
+#CustomSkinAPI
 
 ## Why Shall We Use This
 
@@ -26,7 +26,7 @@ HTTP head `Content-Length` and `Last-Modified` is required.
 
 ### The Root
 
-The root is a definition of URL which is able to respond CustomSkinLoader API.
+The root is a definition of URL which is able to respond CustomSkinAPI.
 
 The root is almost a domain, like `http://localhost/`, domain with a port is also permitted. In some case, you can also use a sub-directory like `http://localhost/csl/`.
 
