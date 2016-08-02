@@ -1,0 +1,16 @@
+[
+{
+  "modid": "customskinmodfix",
+  "name": "CustomSkinModFix",
+  "description": "Mod fix for CustomSkinLoader.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://www.mcbbs.net/thread-269807-1-1.html",
+  "updateUrl": "",
+  "authorList": ["xfl03"],
+  "credits": "GPLv3",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
