@@ -18,14 +18,14 @@
   
 ##文件格式
 同 `CustomSkinLoader.json` loadlist中的格式  
-实例: `Example.json`
-`
+实例: `Example.json`  
+```
 {  
   "name":"Example",  
-  "type":"CustomSkinAPI", 
+  "type":"CustomSkinAPI",  
   "root":"http://www.example.com/"  
 }  
-`
+```
   
 ##其他
 CustomSkinLoader会自动检测皮肤站是否重复，无需担心这一点。  
