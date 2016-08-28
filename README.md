@@ -11,4 +11,9 @@ https://github.com/xfl03/CustomSkinLoaderAPI/blob/master/CustomSkinAPI/CustomSki
   
 ##CustomSkinModFix
 Mod Fix for CustomSkinLoader.  
-LICENSE: GPL v3
+LICENSE: GPL v3  
+  
+##ExtraList
+A function for Skin Server Owner to make it easier for user to add server into 'Load List'.  
+LICENSE: CC 1.0  
+  
