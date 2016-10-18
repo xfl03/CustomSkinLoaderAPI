@@ -11,9 +11,11 @@ import com.mojang.authlib.minecraft.MinecraftProfileTexture;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture.Type;
 
 import customskinloader.CustomSkinLoader;
+
 import ganymedes01.headcrumbs.Headcrumbs;
 import ganymedes01.headcrumbs.utils.TextureUtils;
 import ganymedes01.headcrumbs.utils.helpers.EtFuturumHelper;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.SkinManager;
 import net.minecraft.client.resources.SkinManager.SkinAvailableCallback;
@@ -27,24 +29,24 @@ public class HeadCrumbsFix {
         {
             public Map<Type, MinecraftProfileTexture> load(GameProfile p_load_1_) throws Exception
             {
-                return Minecraft.getMinecraft().func_152347_ac().getTextures(p_load_1_, false);
+                return Minecraft.getMinecraft().getSessionService().getTextures(p_load_1_, false);
             }
         });
 	}
 	
+	//This method will be called only once when needs texture
 	@SuppressWarnings("unchecked")
 	public static void handleClientSide(GameProfile profile){
-		//FMLRelaunchLog.info("[HeadCrumbFix] 2333");
 		Map<Type, MinecraftProfileTexture> map=skinCacheLoader.getUnchecked(profile);
 		if((map==null||map.isEmpty())&&profile.getName()!=null)
 			map=CustomSkinLoader.loadProfile(profile);
 		if(map==null||map.isEmpty())
 			return;
-		SkinManager skinManager = Minecraft.getMinecraft().func_152342_ad();
+		SkinManager skinManager = Minecraft.getMinecraft().getSkinManager();
 		
 		for (Type type : Type.values())
 			if (map.containsKey(type))
-				skinManager.func_152789_a(map.get(type), type, getCallback(profile,type));
+				skinManager.loadSkin(map.get(type), type, getCallback(profile,type));
 	}
 	public static SkinAvailableCallback getCallback(final GameProfile profile,Type type) {
 		if (Headcrumbs.use18PlayerModel)
@@ -52,8 +54,8 @@ public class HeadCrumbsFix {
 		else
 			return new SkinAvailableCallback() {
 				@Override
-				public void func_152121_a(Type texType, ResourceLocation texture) {
-					TextureUtils.textures.get(texType).put(profile.getName(), texture);
+				public void onSkinAvailable(Type type, ResourceLocation texture) {
+					TextureUtils.textures.get(type).put(profile.getName(), texture);
 				}
 			};
 	}

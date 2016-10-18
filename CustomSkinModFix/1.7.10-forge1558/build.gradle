@@ -22,13 +22,15 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.0"
+version = "1.0.1"
 group= "customskinloader.modfix" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "CustomSkinModFix_1.7.10"
+println minecraft.getMappings();
 
 minecraft {
     version = "1.7.10-10.13.4.1558-1.7.10"
     runDir = "eclipse"
+    mappings = "stable_12"
 }
 
 jar {
@@ -73,4 +75,17 @@ processResources
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+}
+task deobfJar(type: Jar, dependsOn: 'jar') {
+    from "build/classes/main"
+    classifier "dev"
+}
+task sourceJar(type: Jar, dependsOn: 'sourceMainJava') {
+    from "build/sources/java"
+    from "build/resources/main/java"
+    classifier "sources"
+}
+artifacts {
+    archives deobfJar
+	archives sourceJar
 }

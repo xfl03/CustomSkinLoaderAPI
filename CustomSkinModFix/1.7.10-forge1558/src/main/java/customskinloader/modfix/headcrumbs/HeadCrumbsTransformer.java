@@ -9,7 +9,7 @@ import org.objectweb.asm.tree.VarInsnNode;
 
 import customskinloader.modfix.ModFixTransformer;
 
-public class HeadCrumbsTransformer extends ModFixTransformer {
+public class HeadCrumbsTransformer {
 
 	/*
        className : ganymedes01.headcrumbs.network.packet.TextureSendPacket

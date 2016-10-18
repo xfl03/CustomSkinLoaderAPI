@@ -29,6 +29,7 @@ public class ModFixTransformer implements IClassTransformer {
 	public ModFixTransformer(){
 		FMLRelaunchLog.info("[ModFixTransformer] Loading");
 		map = new HashMap<String, Map<String, IMethodTransformer>>();
+		//Register method tranformer
 		hookMethod("ganymedes01.headcrumbs.network.packet.TextureSendPacket",
 				"handleClientSide",
 				"(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)V",
