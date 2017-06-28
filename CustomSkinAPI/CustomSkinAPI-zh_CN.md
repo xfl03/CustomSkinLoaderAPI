@@ -13,7 +13,7 @@
 您可以在任何项目中实现基于这一 API 的皮肤加载。  
 
 CustomSkinLoader 已经在 13.1 版本支持CustomSkinAPI R1  
-CustomSkinLoader 将会在 14.5 版本支持CustomSkinAPI R2 
+CustomSkinLoader 已经在 14.5 版本支持CustomSkinAPI R2 
   
 ## API 定义
 
@@ -60,7 +60,7 @@ CustomSkinLoader 将会在 14.5 版本支持CustomSkinAPI R2
 
 项目重复时以`textures`中的为准。    
 所有的项目都是可选的，如果没有，可以直接不返回，也可以留空，也可以使用`null`   
-例如 `"cape" :  ""` `"cape" :  null`
+例如 `"cape" :  ""` 或 `"cape" :  null`
 
 #### 材质字典
 ```
