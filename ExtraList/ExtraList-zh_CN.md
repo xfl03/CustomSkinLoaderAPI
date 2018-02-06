@@ -1,9 +1,10 @@
-# ListAddition
+# ExtraList
 
 ## 功能
 方便用户将皮肤站加入CustomSkinLoader加载列表  
 将会在CustomSkinLoader 14.4中支持  
-  
+*原名ListAddition已被弃用*
+
 ## 要求
 - 为兼容下载器可更改文件名，只需保证文件为 `*.txt` 或 `*.json` 即可  
 - 编码: UTF-8
