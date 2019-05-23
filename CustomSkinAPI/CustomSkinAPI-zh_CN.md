@@ -27,7 +27,7 @@ CustomSkinLoader 已经在 14.5 版本支持CustomSkinAPI R2
 尽可能响应 `If-Modified-Since`   
 尽可能返回正确有效的 `Content-Length` 头与 `Last-Modified` 头，其他 HTTP 头均为可选。  
 
-可响应`Cache-Control`或`Expires`头(任选其一)，CustomSkinLoader将以此来确定内容有效期。    
+可响应`Cache-Control`或`Expires`头(前者优先)，CustomSkinLoader将以此来确定内容有效期。    
 
 ### 根地址
 
